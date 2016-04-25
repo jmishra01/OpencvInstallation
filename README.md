@@ -3,12 +3,14 @@ Esay way to install and configure OpenCV in Ubuntu system. This shell file autom
 required file.
 
 # Installation
-i)    manually download opencv *.zip file (from link http://opencv.org/)
+1. manually download opencv *.zip file (from link http://opencv.org/ or https://github.com/Itseez/opencv)
 
-ii)   placed opencv.sh file on samle directory
+2. placed opencv.sh file on samle directory
 
-iii)  now open terminal at current directory and type ./opencv.sh
+3. now open terminal at current directory and type ./opencv.sh
 
 # Video tutorial
 for video tutorial click on below link
+'''
 https://www.youtube.com/watch?v=Pwk2Oetww1k&list=PLzEIZNgHo73mXE4SsuIgWmq9UYMA394Sk
+'''

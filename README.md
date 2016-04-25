@@ -4,8 +4,5 @@ required file.
 
 # Installation
 i)    manually download opencv *.zip file
-
 ii)   placed opencv.sh file on samle directory
-
-
 iii)  now open terminal at current directory and type ./opencv.sh

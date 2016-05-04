@@ -41,7 +41,7 @@ echo "sudo apt-get install ant default-jdk"
 
 echo "<-------********------For Python------********-------->"
 echo "sudo apt-get install python-dev python-tk python-numpy python3-dev python3-tk python3-numpy python-matplotlib
-sudo apt-get install python-opencv"
+sudo apt-get install python-opencv
 
 echo "%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%"
 mkdir build

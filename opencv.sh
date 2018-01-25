@@ -52,7 +52,7 @@ echo "%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%"
 echo "Downloading OpenCV" $version
 wget -O OpenCV-$version.zip http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/$version/opencv-"$version".zip/download
 echo "Installing OpenCV" $version
-unzip OpenCV-$version.zip
+unzip opencv-$version.zip
 cd opencv-$version
 mkdir build
 cd build

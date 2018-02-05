@@ -13,7 +13,7 @@ required file.
 
 5. type - sudo chmod +x opencv.sh
 
-6. type ./opencv.sh
+6. type - ./opencv.sh
 
 # Video tutorial
 old opencv.sh file video tutorial click on below link

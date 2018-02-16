@@ -10,4 +10,5 @@ else
     echo "Please compile only .c or .cpp files"
 fi
 echo "Output file => ${1%.*}"
-
+./${1%.*}
+rm ${1%.*}

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e:
 echo "compiling $1"
 if [[ $1 == *.c ]]
 then

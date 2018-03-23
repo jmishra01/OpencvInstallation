@@ -6,24 +6,23 @@ function Install(){
 }
 
 function opencv_requiredlibrary(){
-	echo "Removing any pre-installed ffmpeg and x264"
-	echo "sudo apt-get remove x264 libx264-dev"
-	echo "***********************************"
+	# Removing any pre-installed ffmpeg and x264
+	# sudo apt-get remove x264 libx264-dev
 
-	echo "**************Installing Dependenices**************"
+	# ## Installing Dependenices
 	sudo apt-add-repository universe
 	sudo apt-get update
 	Install libopencv-dev
 
 
-	echo "<---------------------------Build Tools------------------------------>"
+	# ## Build Tools
 	Install build-essential
 	Install checkinstall
 	Install cmake
 	Install pkg-config
 
 
-	echo "<---------------------------Image I/O--------------------------------->"
+	# ## Image I/O
 	Install libjpeg8-dev
 	Install libpng12-dev
 	Install libtiff5-dev
@@ -35,9 +34,8 @@ function opencv_requiredlibrary(){
 	Install libpng-dev
 	Install zliblg-dev
 
-	echo "***********************************"
-
-	echo "<--------------------------Video I/O---------------------------------->"
+	
+	# ## Video I/O
 	Install libavcodec-dev
 	Install libavformat-dev
 	Install libmp3lame-dev
@@ -59,44 +57,34 @@ function opencv_requiredlibrary(){
 	Install yasm
 	Install libhdf5-serial-dev
 
-	echo "***********************************"
-
-	echo "Parallelism and linear algebra libraries"
-
+	# ## Parallelism and linear algebra libraries
 	Install libtbb-dev
 	Install libeigen3-dev
 
-	echo "***********************************"
-
-	echo "<---------------------------for GUI------------------------------->"
-
+	# ## GUI
 	Install libqt4-dev
 	Install qtbase5-dev
 	Install libgtk2.0-dev
 	Install qt5-default
 	Install libgtk-3-dev
-#	Install libvtk6-dev
+	Install libvtk6-dev
 
-	echo "****************************************************************"
-
-
-	echo "<----------------------------------------------------------------->"
 	Install libatlas-bas-dev
 	Install gfortran
-	echo "<----------------------------------------------------------------->"
 
-	echo "<--------------For JAVA-------------------->"
+	# ## JAVA
 	echo "sudo apt-get install ant default-jdk"
 
-	echo "<-------********------For Python------********-------->"
+	# ## Python
 	Install python3-dev
-	#Install python-tk
-	#Install python-numpy
-	#Install python3-dev
-	#Install python3-tk
-	#Install python3-numpy
+	Install python3-tk
+	Install python3-numpy
+	
+	
 	Install python-opencv
-
+	Install python-dev
+	Install python-tk
+	Install python-numpy
 }
 
 opencv_requiredlibrary

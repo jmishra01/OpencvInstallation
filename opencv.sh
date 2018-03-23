@@ -23,9 +23,6 @@ cd build
 #echo "*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_"
 
 make clean
-#./javaConf.sh
-#export JAVA_HOME=/usr/local/lib/jvm/jdk1.8.0_144
-#export ANT_HOME=/media/jitendra/Jitu/SoftwarePrograming/Java/Android/apache-ant-1.9.9/bin
 
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -44,20 +41,10 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_TBB=ON \
 	-D WITH_V4L=ON \
 	-D WITH_QT=ON \
+	-D BUILD_opencv_python2=ON \
+	-D BUILD_opencv_python3=ON \
 	-D BUILD_opencv_java=ON \
-	-D BUILd_SHARED_LIBS=OFF ..
-
-    #-D BUILD_opencv_java=ON \
-	#-D PYTHON_DEFAULT_EXECUTABLE=~/anaconda3/bin/python \
-	#-D WITH_VTK=ON \
-	#-D FORCE_VTK=TRUE \
-# for configure python
-	#-D PYTHON_DEFAULT_EXECUTABLE=$PYTHON/bin/python3 \
-	#-D PYTHON_EXECUTABLE=$PYTHON3/bin/python3 \
-	#-D PYTHON_INCLUDE_DIR=$PYTHON3/include/python3.5m \
-	#-D PYTHON_INCLUDE_DIR2=/usr/include/x86_64-linux-gnu/python3.5m \
-	#-D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so.1 \
-	#-D PYTHON_NUMPY_INCLUDE_DIRS=$PYTHON3/lib/python3.4/site-packages/numpy/core/include	\
+	-D BUILd_SHARED_LIBS=OFF ../opencv
 
 #---------------------------------------------------------------------------------------------#
 make check_pylint

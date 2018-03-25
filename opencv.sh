@@ -3,27 +3,37 @@
 ## install git
 sudo apt install git
 
-## download opencv from git
-git clone https://github.com/opencv/opencv.git
+if [ ! -d "opencv" ]; then
+    ## download opencv from git
+    git clone https://github.com/opencv/opencv.git
+else
+    cd opencv
+    git pull
+    cd ..
+fi
 
-## change directory
-cd opencv
-
-## download opencv_contrib from git
-git clone https://github.com/opencv/opencv_contrib.git
+if [ ! -d "opencv_contrib" ]; then
+    ## download opencv_contrib from git
+    git clone https://github.com/opencv/opencv_contrib.git
+else
+    cd opencv_contrib
+    git pull
+    cd ..
+fi
 
 ## install supporting files
 sudo chmod +x requiredlibrary.sh
 ./requiredlibrary.sh
 
-## make build directory
-mkdir build
-cd build
+if [ -d "build" ]; then
+    cd build
+    make clean
+else
+    mkdir build
+    cd build
+fi
 
-#echo "*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_"
-
-make clean
-
+# ## ------------------------------------------------- ##
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \

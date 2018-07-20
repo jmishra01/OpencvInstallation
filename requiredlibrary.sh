@@ -47,6 +47,8 @@ function opencv_requiredlibrary(){
 	Install x264
 	Install yasm
 	Install libhdf5-serial-dev
+	# ## OCR
+	Install tesseract-ocr
 	# ## Parallelism and linear algebra libraries
 	Install libtbb-dev
 	Install libeigen3-dev

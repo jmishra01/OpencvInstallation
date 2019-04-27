@@ -54,7 +54,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_opencv_python2=ON \
 	-D BUILD_opencv_python3=ON \
 	-D BUILD_opencv_java=ON \
-	-D BUILd_SHARED_LIBS=OFF ../opencv
+	-D BUILd_SHARED_LIBS=ON ../opencv
 
 #---------------------------------------------------------------------------------------------#
 make check_pylint

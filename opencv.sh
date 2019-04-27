@@ -35,6 +35,7 @@ fi
 
 # ## ------------------------------------------------- ##
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	-D OPENCV_GENERATE_PKGCONFIG=YES \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
 	-D INSTALL_PYTHON_EXAMPLES=ON \

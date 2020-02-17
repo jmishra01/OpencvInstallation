@@ -33,10 +33,13 @@ else
     cd build
 fi
 
+# Change version of java which install in your system 
+export JAVA_HOME=~/.local/lib/jvm/jdk1.8.0_211
+
 # ## ------------------------------------------------- ##
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D OPENCV_GENERATE_PKGCONFIG=YES \
-	-D CMAKE_INSTALL_PREFIX=/usr/local \
+	-D CMAKE_INSTALL_PREFIX=~/.local \
 	-D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
 	-D INSTALL_C_EXAMPLES=ON \
@@ -54,6 +57,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D WITH_QT=ON \
 	-D BUILD_opencv_python2=ON \
 	-D BUILD_opencv_python3=ON \
+	-D PYTHON3_EXECUTABLE=~/.local/bin/python3.7 \
+        -D PYTHON3_INCLUDE_DIR=~/.local/include/python3.7m \
+        -D PYTHON3_PACKAGES_PATH=~/.local/lib/python3.7/site-packages \
 	-D BUILD_opencv_java=ON \
 	-D BUILd_SHARED_LIBS=ON ../opencv
 

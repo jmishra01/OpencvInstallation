@@ -61,6 +61,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
         -D PYTHON3_INCLUDE_DIR=~/.local/include/python3.7m \
         -D PYTHON3_PACKAGES_PATH=~/.local/lib/python3.7/site-packages \
 	-D BUILD_opencv_java=ON \
+	-D WITH_JULIA=ON \
 	-D BUILd_SHARED_LIBS=ON ../opencv
 
 #---------------------------------------------------------------------------------------------#
@@ -69,6 +70,9 @@ make -j8
 sudo make install
 sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
+
+# for Documentation
+make -j doxygen
 #---------------------------------------------------------------------------------------------#
 
 echo "<---------------- OpenCV ready to be used ---------------->"
